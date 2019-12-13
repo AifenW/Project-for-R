@@ -7,7 +7,7 @@ library(dplyr)
 library(ggplot2)
 
 library(readr)
-OrderData<-read_csv("C:/Users/awang/Documents/2018-1-22/SAS_R/R/RLearning/RProject/Project 5 Customer_Segmentation_Using_RFM_Analysis/sample-sales-data/sales_data_sample.csv ")
+OrderData<-read_csv("~/sales_data_sample.csv ")
 
 rfm_data<-OrderData %>%
   mutate(ORDERDATE=as.Date(ORDERDATE, "%m/%d/%Y")) %>%
