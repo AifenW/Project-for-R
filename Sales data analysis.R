@@ -5,7 +5,7 @@ library(dplyr)
 library(ggplot2)
 
 library(readr)
-SalesData<-read_csv("C:/Users/awang/Documents/2018-1-22/SAS_R/R/RLearning/RProject/Customer_Segmentation_Using_RFM_Analysis/sample-sales-data/sales_data_sample.csv ")
+SalesData<-read_csv("~/RProject/Customer_Segmentation_Using_RFM_Analysis/sample-sales-data/sales_data_sample.csv ")
 
 ## SALES prediction using Multiple Linear Regression
 
