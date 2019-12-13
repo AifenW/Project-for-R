@@ -4,13 +4,13 @@
 install.packages("readxl")
 library(readxl)
 
-origene_salesdata<-read_excel("C:/Users/awang/Documents/2018-1-22/SAS_R/R/RLearning/RProject/Project 6 Origene sales data analysis/Data Cleaning/origene_salesdata.xlsx")
+salesdata<-read_excel("~/Data Cleaning/salesdata.xlsx")
 
-  # glimpse origene_salesdata
+  # glimpse salesdata
 
 library(tidyverse)
 
-glimpse(origene_salesdata)
+glimpse(salesdata)
 
 # subset salesdata which contain only 5 attributes
 
@@ -19,7 +19,7 @@ library(sqldf)
 
 subset_salesdata<-sqldf("
    select Customer, `Sales Order #`, Amount, Date, Email
-   from origene_salesdata
+   from salesdata
          ")
 
 nrow(subset_salesdata)   #248996
