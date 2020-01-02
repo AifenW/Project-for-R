@@ -25,14 +25,14 @@ subset_salesdata<-sqldf("
 nrow(subset_salesdata)   #248996
 length(unique(subset_salesdata$Customer)) #12172
 
-# create new_salesdata1 which Amount>0 and not from Origene
+# create new_salesdata1 which Amount>0 and not from O
 
 nointer_sd<-subset_salesdata %>%
-  filter(!grepl("@origene",Email))%>%
+  filter(!grepl("@o",Email))%>%
   filter(Amount>0)
 
 head(nointer_sd)
-nrow(nointer_sd) #235877 (Amount>0)  248331 (!@origene) 235877 (both)
+nrow(nointer_sd) #235877 (Amount>0)  248331 (!@o) 235877 (both)
 length(unique(nointer_sd$Email)) #9814
 
 length(unique(nointer_sd$Customer)) #12006
